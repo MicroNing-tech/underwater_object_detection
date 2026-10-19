@@ -1,0 +1,24 @@
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 虚拟环境
+.venv/
+venv/
+
+# PyCharm 本地配置
+.idea/
+
+# 训练结果
+runs/
+
+# 模型权重
+*.pt
+*.pth
+
+# 数据集（如果存放在项目内部）
+datasets/
+data/
+
+# 环境变量和密钥
+.env
