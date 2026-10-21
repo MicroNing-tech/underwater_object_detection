@@ -9,6 +9,9 @@ venv/
 # PyCharm 本地配置
 .idea/
 
+# 实验记录
+records/
+
 # 训练结果
 runs/
 
