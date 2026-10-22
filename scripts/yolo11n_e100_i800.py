@@ -6,6 +6,7 @@ import torch
 from ultralytics import YOLO
 
 from experiment_ledger import save_experiment_record
+from inference_benchmark import benchmark_fps
 
 
 # ==========================================
@@ -404,8 +405,22 @@ def main():
         run_dir=run_dir
     )
 
+    # ==========================================
+    # 5.11 测量端到端 FPS
+    # ==========================================
+
+    fps_mean, fps_std = benchmark_fps(
+        model=best_model,
+        test_dir=DATA_ROOT / "images" / "test",
+        imgsz=IMG_SIZE,
+        device=DEVICE,
+        batch=1,
+        warmup=50,
+        repeats=3,
+    )
+
     # --------------------------------------
-    # 5.11 整理实验台账
+    # 5.12 整理实验台账
     # --------------------------------------
 
     print("\n========== 整理实验台账 ==========")
@@ -478,10 +493,19 @@ def main():
         "train_minutes": round(
             train_minutes, 2
         ),
+
+        # ===== FPS =====
+        "fps_mean": round(
+            fps_mean, 3
+        ),
+
+        "fps_std": round(
+            fps_std, 3
+        ),
     }
 
     # --------------------------------------
-    # 5.12 调用台账记录函数
+    # 5.13 调用台账记录函数
     # --------------------------------------
 
     save_experiment_record(
@@ -490,7 +514,7 @@ def main():
     )
 
     # --------------------------------------
-    # 5.13 运行完成
+    # 5.14 运行完成
     # --------------------------------------
 
     print("\n====================================")

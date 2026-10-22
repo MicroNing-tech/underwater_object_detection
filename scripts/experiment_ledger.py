@@ -42,8 +42,10 @@ FIELDS = [
     "test_mAP50",
     "test_mAP50_95",
 
-    # 训练耗时
+    # 训练耗时 完整测试集的端到端FPS
     "train_minutes",
+    "fps_mean",
+    "fps_std",
 ]
 
 
