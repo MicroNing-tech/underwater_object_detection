@@ -16,9 +16,7 @@ from inference_benchmark import benchmark_fps
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
 
-DATA_ROOT = Path(
-    r"E:\learn_postgraduate\Dataset\RUOD-R\RUOD-R-YOLO-Split"
-)
+DATA_ROOT = Path("/data/RUOD-R")
 
 DATA_YAML = PROJECT_ROOT / "configs" / "dataset" / "data.yaml"
 
@@ -39,7 +37,7 @@ DATASET_NAME = "RUOD-R"
 # ==========================================
 
 EPOCHS = 100
-BATCH_SIZE = 8
+BATCH_SIZE = 16
 IMG_SIZE = 800
 
 DEVICE = 0 if torch.cuda.is_available() else "cpu"

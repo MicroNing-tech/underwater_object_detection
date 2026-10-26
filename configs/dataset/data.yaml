@@ -1,4 +1,4 @@
-path: E:/learn_postgraduate/Dataset/RUOD-R/RUOD-R-YOLO-Split
+path: /data/RUOD-R
 
 train: images/train
 val: images/val
