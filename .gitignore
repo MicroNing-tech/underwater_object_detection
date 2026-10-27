@@ -14,6 +14,7 @@ records/
 
 # 训练结果
 runs/
+logs/
 
 # 模型权重
 *.pt
