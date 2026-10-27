@@ -6,7 +6,6 @@ import torch
 from ultralytics import YOLO
 
 from experiment_ledger import save_experiment_record
-from inference_benchmark import benchmark_fps
 
 
 # ==========================================
@@ -17,7 +16,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
 
 DATA_ROOT = Path(
-    r"E:\learn_postgraduate\Dataset\RUOD-R\RUOD-R-YOLO-Split"
+    r"E:\learn_postgraduate\Dataset\RUOD-R\RUOD-R"
 )
 
 DATA_YAML = PROJECT_ROOT / "configs" / "dataset" / "data.yaml"

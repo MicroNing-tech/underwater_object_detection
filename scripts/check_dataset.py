@@ -10,7 +10,7 @@ import yaml
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 DATA_ROOT = Path(
-    r"E:\learn_postgraduate\Dataset\RUOD-R\RUOD-R-YOLO-Split"
+    r"E:\learn_postgraduate\Dataset\RUOD-R\RUOD-R"
 )
 
 DATA_YAML = PROJECT_ROOT / "configs" / "dataset" / "data.yaml"
